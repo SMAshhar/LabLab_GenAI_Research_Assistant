@@ -1,6 +1,6 @@
 # Import the required agents
 from crewai import Agent
-from core_agents import ResearchAgent, TheoryTestingAgent, SuggestionAgent
+from new_agents import ResearchAgent, TheoryTestingAgent, SuggestionAgent
 
 # Assuming the core_gpt_model and all agent classes (ResearchAgent, TheoryTestingAgent, SuggestionAgent) are defined above
 
