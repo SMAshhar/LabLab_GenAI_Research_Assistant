@@ -2,6 +2,7 @@ import os
 from typing import List
 from pydantic import BaseModel
 from openai import OpenAI
+from functions import research_papers, suggestions, throey_test, tools_func
 
 
 research_message = [
@@ -65,7 +66,8 @@ def core_gpt_model(messages: List) -> str:
     try:
         response = client.chat.completions.create(
             model="gpt-4o-mini",
-            messages=messages
+            messages=messages,
+            tools=tools_func
         )
         # Return the model's response (strip any leading/trailing whitespace)
         return response['choices'][0]['message']['content'].strip()
